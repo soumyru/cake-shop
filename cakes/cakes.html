@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cakes</title>
+    <link rel="stylesheet" href="cakes.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../assets/logo.jpg" alt="logo">
+            <h1>Cake Shop</h1>
+        </div>
+        <div class="cake-h">
+            <h1>Cakes</h1>
+        </div>
+        <div class="contact-info">
+            <p>cakeshop@info.com</p>
+            <p>1234567890</p>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <!-- <a href="#menu" class="order-something">Order Something!</a> -->
+        <svg class="bottom-border" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
+            <path fill="white" fill-opacity="1"
+                d="M0,96L48,122.7C96,149,192,203,288,197.3C384,192,480,128,576,117.3C672,107,768,149,864,165.3C960,181,1056,171,1152,160C1248,149,1344,139,1392,133.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+            </path>
+        </svg>
+    </section>
+
+    <section class="cake-flex">
+        <div class="flex-items">
+            <div class="cake-card" id="cake1">
+                <div>
+                <h2>Chocolate Cake</h2>
+                <a href=""></a>
+                </div>
+                <div class="cake-details">
+                    <p>Experience pure delight with our decadent chocolate cake, a symphony of rich flavors that will enchant your taste buds.</p>
+                    <div class="item-price">
+                        <h4 class="price">Price: Rs.100</h4>
+                        <div class="add-sub-item">
+                            <button onclick="updateItemQuantity(this, 1)" class="add">+</button>
+                            <p class="number-of-item">0</p>
+                            <button onclick="updateItemQuantity(this, -1)" class="remove">-</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cake-card" id="cake2">
+                <div>
+                <h2>Pineapple Cake</h2>
+                <a href=""></a>
+                </div>
+                <div class="cake-details">
+                    <p>Experience pure delight with our decadent chocolate cake, a symphony of rich flavors that will enchant your taste buds.</p>
+                    <div class="item-price">
+                        <h4 class="price">Price: Rs.100</h4>
+                        <div class="add-sub-item">
+                            <button onclick="updateItemQuantity(this, 1)" class="add">+</button>
+                            <p class="number-of-item">0</p>
+                            <button onclick="updateItemQuantity(this, -1)" class="remove">-</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cake-card" id="cake3">
+                <div>
+                <h2>Blueberry Cake</h2>
+                <a href=""></a>
+                </div>
+                <div class="cake-details">
+                    <p>Experience pure delight with our decadent chocolate cake, a symphony of rich flavors that will enchant your taste buds.</p>
+                    <div class="item-price">
+                        <h4 class="price">Price: Rs.100</h4>
+                        <div class="add-sub-item">
+                            <button onclick="updateItemQuantity(this, 1)" class="add">+</button>
+                            <p class="number-of-item">0</p>
+                            <button onclick="updateItemQuantity(this, -1)" class="remove">-</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cake-card" id="cake4">
+                <div>
+                <h2>Red Velvet Cake</h2>
+                <a href=""></a>
+                </div>
+                <div class="cake-details">
+                    <p>Experience pure delight with our decadent chocolate cake, a symphony of rich flavors that will enchant your taste buds.</p>
+                    <div class="item-price">
+                        <h4 class="price">Price: Rs.100</h4>
+                        <div class="add-sub-item">
+                            <button onclick="updateItemQuantity(this, 1)" class="add">+</button>
+                            <p class="number-of-item">0</p>
+                            <button onclick="updateItemQuantity(this, -1)" class="remove">-</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="go-to-cart">
+        <div class="total">
+            <h3>Total Amount: Rs.</h3>
+            <h3 id="total-price">0</h3>
+        </div>
+        <a href="cart.html"><h3>Go to Cart =></h3></a>
+    </section>
+
+    <footer>
+        <div class="footer-info ">
+          <p>cakeshop@info.com</p>
+          <p>1234567890</p>
+          <p>Cake Shop, abc road, xyz area, city, state, India</p>
+        </div>
+        <ul class="social-media">
+          <li><i class="fa-brands fa-instagram"></i></li>
+          <li><i class="fa-brands fa-facebook"></i></li>
+    
+        </ul>
+      </footer>
+    
+      <script src="cakes.js"></script>
+</body>
+
+</html>
