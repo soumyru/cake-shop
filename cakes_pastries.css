@@ -21,7 +21,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
 .logo img {
@@ -57,7 +56,7 @@ header {
     padding-top: 40px; 
   }
 
-  .pastries-h{
+  .cake-h{
     font-size: 30px;
   }
   
@@ -67,11 +66,11 @@ header {
   }
   
 
-  .pastries-flex{
+  .cake-flex, .pastries-flex{
     margin-bottom: 30px;
   }
 
-  .pastries-card{
+  .cake-card,.pastries-card{
     display: flex;
   }
 
@@ -83,7 +82,7 @@ header {
     margin-top: 20px;
   }
   
-  #pastries1,#pastries2,#pastries3,#pastries4{
+  #cake1,#cake2,#cake3,#cake4,#pastries1,#pastries2,#pastries3,#pastries4{
     width: 400px;
     height:auto;
     margin: 20px;
@@ -92,7 +91,7 @@ header {
     border: 6px double white;
   }
   
-  #pastries1 a,#pastries2 a,#pastries3 a,#pastries4 a{
+  #cake1 a,#cake2 a,#cake3 a,#cake4 a,#pastries1 a,#pastries2 a,#pastries3 a,#pastries4 a{
     text-decoration: none;
     border: 2px dashed white;
     background-size: cover;
@@ -101,8 +100,24 @@ header {
     height: 200px;
   }
   
+  #cake1 a{
+    background-image: url("../assets/cake7.jpg");
+  }
+  
+  #cake2 a{
+    background-image: url("../assets/cake1.jpg");
+  }
+  
+  #cake3 a{
+    background-image: url("../assets/cake5.jpg");
+  }
+
+  #cake4 a{
+    background-image: url("../assets/cake6.jpg");
+  }
+
   #pastries1 a{
-    background-image: url("../assets/pastries2.jpg");
+    background-image: url("../assets/pastry3.jpg");
   }
   
   #pastries2 a{
@@ -110,32 +125,32 @@ header {
   }
   
   #pastries3 a{
-    background-image: url("../assets/pastry3.jpg");
+    background-image: url("../assets/pastry2.jpg");
   }
 
   #pastries4 a{
     background-image: url("../assets/pastry4.jpg");
   }
 
-  .pastries {
+  .cake,.pastries {
     margin-bottom: 40px;
   }
   
-  .pastries img {
+  .cake img, .pastries img{
     max-width: 100%;
   }
   
-  .pastries h3 {
+  .cake h3,.pastries h3 {
     font-size: 24px;
     margin-bottom: 10px;
   }
   
-  .pastries p {
+  .cake p,.pastries p {
     font-size: 16px;
     color: #666;
   }
 
-  .pastries-details{
+  .cake-details,.pastries-details{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -147,34 +162,46 @@ header {
   .item-price{
     margin-top: 10px;
  }
+
+ .add-item{
+  display: flex;
+ }
+
+button{
+  cursor: pointer;
+ }
  
  .add-sub-item{
+  display: none;
+  justify-content: center;
+  line-height: 35px;
+ }
+ 
+.add-sub-item p{
      display: flex;
      justify-content: center;
-     line-height: 40px;
+     line-height: 35px;
  }
  
- .add-sub-item button{
+ .add-item button,.add-sub-item button{
      margin: 0 10px;
-     border: none;
-     padding: 10px 12px;
-     border-radius: 10px;
-     background-color: rgb(243, 151, 239);
-     border:2px dashed white;
-     font-weight:600;
+     font-family: "Sacramento", cursive;
+    font-style: normal;
+    font-size: 20px;
  }
  
- .add-sub-item button:hover{
+ .add-sub-item button:hover,.add-item button:hover{
     background-color: rgb(255, 255, 255);
     border:2px dashed rgb(243, 151, 239);
  }
  
- .add-sub-item p{
+ .add-sub-item p,.add-item button,.add-sub-item button{
     background-color: rgb(243, 151, 239);
     border:2px dashed white;
-     padding: 0 20px;
-     border-radius: 10px;
-     font-weight:600;
+    padding: 0 12px;
+    border-radius: 10px;
+    font-weight:600;
+    height: 30px;
  }
  
  .go-to-cart{

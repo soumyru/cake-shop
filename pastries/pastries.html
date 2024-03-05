@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pastries</title>
-    <link rel="stylesheet" href="pastries.css">
+    <link rel="stylesheet" href="../cakes_pastries.css">
 </head>
 
 <body>
@@ -36,69 +36,85 @@
         <div class="flex-items">
             <div class="pastries-card" id="pastries1">
                 <div>
-                <h2>Chocolate pastries</h2>
-                <a href=""></a>
+                    <h2 class="pastries-name">Chocolate pastries</h2>
+                    <a href=""></a>
                 </div>
                 <div class="pastries-details">
-                    <p>Experience pure delight with our decadent chocolate pastries, a symphony of rich flavors that will enchant your taste buds.</p>
+                    <p>Experience pure delight with our decadent chocolate pastries, a symphony of rich flavors that
+                        will enchant your taste buds.</p>
                     <div class="item-price">
-                        <h4 class="price">Price: Rs.100</h4>
-                        <div class="add-sub-item">
+                        <div class="add-item">
+                            <h4 class="price">Price: Rs.500</h4>
+                            <button onclick="addItem(this)">Add</button>
+                        </div>
+                        <!-- <div class="add-sub-item">
                             <button onclick="updateItemQuantity(this, 1)" class="add">+</button>
                             <p class="number-of-item">0</p>
                             <button onclick="updateItemQuantity(this, -1)" class="remove">-</button>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
             <div class="pastries-card" id="pastries2">
                 <div>
-                <h2>Pineapple pastries</h2>
-                <a href=""></a>
+                    <h2 class="pastries-name">Strawberry pastries</h2>
+                    <a href=""></a>
                 </div>
                 <div class="pastries-details">
-                    <p>Experience pure delight with our decadent chocolate pastries, a symphony of rich flavors that will enchant your taste buds.</p>
+                    <p>Experience pure delight with our decadent chocolate pastries, a symphony of rich flavors that
+                        will enchant your taste buds.</p>
                     <div class="item-price">
-                        <h4 class="price">Price: Rs.100</h4>
-                        <div class="add-sub-item">
+                        <div class="add-item">
+                            <h4 class="price">Price: Rs.600</h4>
+                            <button onclick="addItem(this)">Add</button>
+                        </div>
+                        <!-- <div class="add-sub-item">
                             <button onclick="updateItemQuantity(this, 1)" class="add">+</button>
                             <p class="number-of-item">0</p>
                             <button onclick="updateItemQuantity(this, -1)" class="remove">-</button>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
             <div class="pastries-card" id="pastries3">
                 <div>
-                <h2>Blueberry pastries</h2>
-                <a href=""></a>
+                    <h2 class="pastries-name">Blueberry pastries</h2>
+                    <a href=""></a>
                 </div>
                 <div class="pastries-details">
-                    <p>Experience pure delight with our decadent chocolate pastries, a symphony of rich flavors that will enchant your taste buds.</p>
+                    <p>Experience pure delight with our decadent chocolate pastries, a symphony of rich flavors that
+                        will enchant your taste buds.</p>
                     <div class="item-price">
-                        <h4 class="price">Price: Rs.100</h4>
-                        <div class="add-sub-item">
+                        <div class="add-item">
+                            <h4 class="price">Price: Rs.600</h4>
+                            <button onclick="addItem(this)">Add</button>
+                        </div>
+                        <!-- <div class="add-sub-item">
                             <button onclick="updateItemQuantity(this, 1)" class="add">+</button>
                             <p class="number-of-item">0</p>
                             <button onclick="updateItemQuantity(this, -1)" class="remove">-</button>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
             <div class="pastries-card" id="pastries4">
                 <div>
-                <h2>Red Velvet pastries</h2>
-                <a href=""></a>
+                    <h2 class="pastries-name">Red Velvet pastries</h2>
+                    <a href=""></a>
                 </div>
                 <div class="pastries-details">
-                    <p>Experience pure delight with our decadent chocolate pastries, a symphony of rich flavors that will enchant your taste buds.</p>
+                    <p>Experience pure delight with our decadent chocolate pastries, a symphony of rich flavors that
+                        will enchant your taste buds.</p>
                     <div class="item-price">
-                        <h4 class="price">Price: Rs.100</h4>
-                        <div class="add-sub-item">
+                        <div class="add-item">
+                            <h4 class="price">Price: Rs.600</h4>
+                            <button onclick="addItem(this)">Add</button>
+                        </div>
+                        <!-- <div class="add-sub-item">
                             <button onclick="updateItemQuantity(this, 1)" class="add">+</button>
                             <p class="number-of-item">0</p>
                             <button onclick="updateItemQuantity(this, -1)" class="remove">-</button>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -110,23 +126,25 @@
             <h3>Total Amount: Rs.</h3>
             <h3 id="total-price">0</h3>
         </div>
-        <a href="cart.html"><h3>Go to Cart =></h3></a>
+        <a href="../cart/cart.html" target="_blank">
+            <h3>Go to Cart =></h3>
+        </a>
     </section>
 
     <footer>
         <div class="footer-info ">
-          <p>cakeshop@info.com</p>
-          <p>1234567890</p>
-          <p>cake Shop, abc road, xyz area, city, state, India</p>
+            <p>cakeshop@info.com</p>
+            <p>1234567890</p>
+            <p>cake Shop, abc road, xyz area, city, state, India</p>
         </div>
         <ul class="social-media">
-          <li><i class="fa-brands fa-instagram"></i></li>
-          <li><i class="fa-brands fa-facebook"></i></li>
-    
+            <li><i class="fa-brands fa-instagram"></i></li>
+            <li><i class="fa-brands fa-facebook"></i></li>
+
         </ul>
-      </footer>
-    
-      <script src="pastries.js"></script>
+    </footer>
+
+    <script src="../cart/cart.js"></script>
 </body>
 
 </html>
