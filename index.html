@@ -70,10 +70,10 @@
   <section class="contact" id="contact">
     <h1>Contact Us</h1>
     <div class="contact-us">
-      <form action="">
-        <input type="email" placeholder="Your email">
+      <form action="mailto:mymail@example.com" method="get">
+        <input type="email" placeholder="Your email" required>
         <textarea name="" id="" cols="30" rows="10" placeholder="(optional)"></textarea>
-        <button id="submit-btn">Submit</button>
+        <button type="submit" id="submit-btn" onclick="alert('Form submitted')">Submit</button>
       </form>
       <div class="map">
         <!-- Google Maps integration can be added here -->

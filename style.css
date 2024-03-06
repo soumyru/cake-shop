@@ -255,7 +255,8 @@ footer ul {
 footer li {
   text-decoration: none;
   color: #fff;
-  margin-right: 10px;
+  margin-right: 12px;
+  font-size: 20px;
 }
 
 footer p{

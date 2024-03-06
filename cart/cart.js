@@ -10,7 +10,7 @@ function updateItemQuantity(button, change) {
   const priceElement = itemCard.querySelector(".price");
   const priceText = priceElement.textContent;
   const price = parseInt(priceElement.textContent.split(".")[1].trim());
-
+  
   if (change > 0) {
     updateTotalPrice(price * change);
     addToCart(itemName,price);
@@ -31,6 +31,7 @@ function addItem(button) {
   }
 }
 
+
 function addToCart(itemName,price){
     //retrieves the current cart items from the local storage and '|| []' is used to provide an empty array as a default value if there are no cart items stored in the local storage
     let cartItems=JSON.parse(localStorage.getItem("cart")) || []; //JSON.parse converts teh retrieved data which is in JSON format to JS object
@@ -41,7 +42,7 @@ function addToCart(itemName,price){
 function removeFromCart(itemName,price){
     let cartItems=JSON.parse(localStorage.getItem("cart")) || [];
     //filter method is used to iterate over each item in the cartItems array. 
-    cartItems=cartItems.filter(item=>item.itemname!==itemName);//For each item, the callback function (item => item.itemname !== itemName) is called. This function checks if the itemname property of the current item is not equal to the itemName parameter passed to the removeFromCart function.
+    cartItems=cartItems.filter(item=>item.itemName!==itemName);//For each item, the callback function (item => item.itemname !== itemName) is called. This function checks if the itemname property of the current item is not equal to the itemName parameter passed to the removeFromCart function.
     localStorage.setItem("cart",JSON.stringify(cartItems));
 }
 
@@ -83,6 +84,7 @@ function createCartItem(itemName,price) {
   itemDetails.classList.add("item");
 
   const itemNameElement = document.createElement("h4");
+  itemNameElement.classList.add('item-name');
   itemNameElement.textContent = itemName;
 
   const priceElement = document.createElement("h4");
@@ -102,7 +104,7 @@ function createCartItem(itemName,price) {
   const addButton = document.createElement("button");
   addButton.textContent = "+";
   addButton.onclick=function(){
-    updateItemQuantity(button,1);
+    addSubItemBtn(this,1,price);
   };
 
   const numberOfItem = document.createElement("p");
@@ -112,7 +114,7 @@ function createCartItem(itemName,price) {
   const subButton = document.createElement("button");
   subButton.textContent = "-";
   subButton.onclick=function(){
-    updateItemQuantity(button,-1);
+    addSubItemBtn(this,-1,price);
   };
 
   addSubItem.appendChild(addButton);
@@ -121,4 +123,21 @@ function createCartItem(itemName,price) {
   cartItem.appendChild(addSubItem);
 
   return cartItem;
+}
+
+function addSubItemBtn(button,change,price){
+  const numberOfItemElement=button.parentNode.querySelector('.number-of-item');
+  let numberOfItem=parseInt(numberOfItemElement.textContent);
+  const itemNameElement=button.closest('.cart-item').querySelector('.item-name');
+  const itemName=itemNameElement.textContent;
+  
+  if(numberOfItem+change<0){
+    removeFromCart(itemName,price);
+    button.closest('.cart-item').remove();
+  }
+  else{
+    numberOfItem+=change;
+    numberOfItemElement.textContent=numberOfItem;
+  updateTotalPrice(change*price);
+  }
 }
